@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>运维知识助手</title>
+  <link rel="icon" href="/static/robot.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="bot">
+        <img class="avatar" src="/static/robot.svg" alt="机器人头像">
+        <div>
+          <div class="name">运维知识助手</div>
+          <div class="subtitle">RAG 知识库 · CrewAI Agent</div>
+        </div>
+      </div>
+      <div class="status" id="status">
+        <span class="dot"></span>
+        <span id="status-text">连接中…</span>
+      </div>
+    </header>
+
+    <main class="chat" id="chat">
+      <div class="bubble bot">
+        <img class="avatar small" src="/static/robot.svg" alt="机器人头像">
+        <div class="msg">
+          你好，我是运维知识助手。已接入 MG-3405 等技术文档知识库，你可以问我故障原因、解决步骤、适用机型，也可以让我比较不同文档版本。
+        </div>
+      </div>
+    </main>
+
+    <div class="suggestions" id="suggestions">
+      <button class="chip">MG-3405 是什么问题？</button>
+      <button class="chip">解决步骤有哪些？</button>
+      <button class="chip">适用于哪些系统？</button>
+      <button class="chip">比较 Draft 和 Final 版本</button>
+    </div>
+
+    <div class="uploadbar">
+      <button id="upload" class="upload-btn">📤 上传文档</button>
+      <input id="file-input" type="file" hidden
+             accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
+      <div id="upload-status" class="upload-status" hidden>
+        <span class="spinner"></span>
+        <span id="upload-text"></span>
+      </div>
+    </div>
+
+    <footer class="composer">
+      <textarea id="input" rows="1" placeholder="输入问题，Enter 发送，Shift+Enter 换行"></textarea>
+      <button id="send" class="send" title="发送">发送</button>
+    </footer>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

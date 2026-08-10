@@ -1,0 +1,49 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*apiKey*.csv
+*apikey*.csv
+
+# Local source material and generated manifests
+data/*
+!data/.gitkeep
+config/manifest.yaml
+
+# Runtime data, indexes, parser output, and logs
+runtime/*
+!runtime/.gitkeep
+output.txt
+*.log
+*.out
+*.err
+*.pid
+
+# Local, document-specific experiments
+scripts/ingest_mg3405_final_text.py
+scripts/run_mg3405_question.py
+
+# Internal working docs (not for public release)
+REPORT.md
+TODO.md
+
+# Test temp dirs
+.pytest_tmp/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

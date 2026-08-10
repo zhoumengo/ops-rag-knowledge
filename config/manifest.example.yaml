@@ -1,0 +1,43 @@
+schema_version: 1
+source_root: ./data
+documents:
+  - document_id: OPS-100-example-final
+    file_name: OPS-100 (Final).pdf
+    source_path: data/OPS-100 (Final).pdf
+    sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+    size_bytes: 123456
+    pages: 10
+    document_code: OPS-100
+    problem_id: example-final
+    status: Final
+    version: "1.0"
+    updated_at: null
+    systems:
+      - ExampleSystem
+    software:
+      - "1.0"
+    destinations:
+      - ExampleSite
+    content_profile: operations_record
+    parser: mineru
+    parse_method: txt
+  - document_id: OPS-100-example-draft
+    file_name: OPS-100 (Draft).pdf
+    source_path: data/OPS-100 (Draft).pdf
+    sha256: "1111111111111111111111111111111111111111111111111111111111111111"
+    size_bytes: 120000
+    pages: 9
+    document_code: OPS-100
+    problem_id: example-draft
+    status: Draft
+    version: "0.9"
+    updated_at: null
+    systems:
+      - ExampleSystem
+    software:
+      - "0.9"
+    destinations:
+      - ExampleSite
+    content_profile: operations_record
+    parser: mineru
+    parse_method: txt
